@@ -6,12 +6,13 @@ body{
 }
 .container{
     width:50%;
-    height: 40%;
+    height: 400px;
     background-color: #FBFCFC;
     border-radius: 25px;
     margin-left: auto;
     margin-right: auto;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   
 }
 .input_write{
     width: 80%;
@@ -39,6 +40,7 @@ body{
     float: right;
     margin-right:10%;
     margin-top: 10px;
+ 
 
 }
 .btn_rotat img{
