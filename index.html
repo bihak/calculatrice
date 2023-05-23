@@ -21,7 +21,7 @@
         <div class="calculator">
             <div class="Calculator_Scientific">
                 <div class="div1">
-                    <div class="btn_switch" id="id_switch">
+                    <div class="btn_switch" id="id_switch" onclick="Back()">
                         <img src="./source/image/arrow_L.png" alt="">
                         <img src="./source/image/arrow_R.png" alt="">
                     </div>
@@ -61,7 +61,7 @@
                 <div class="div1">
                     <div class="btn_sup_input_write" id="id_sup_input_write" onclick="clean()">C</div>
                     <div class="btn_parenthesis" id="id_parenthesis" onclick="parenthesis()">( )</div>
-                    <div class="btn_percentage" id="id_percentage">%</div>
+                    <div class="btn_percentage" id="id_percentage" onclick="percent()">%</div>
                     <div class="btn_division" id="id_division" onClick="display('/')">/</div>
                 </div>
                 <div class="div1">
@@ -83,9 +83,9 @@
                     <div class="btn_addition" id="id_addition" onClick="display('+')">+</div>
                 </div>
                 <div class="div1">
-                    <div class="btn_moreless" id="id_moreless">+/-</div>
+                    <div class="btn_moreless" id="id_moreless" onclick="addOperator('+/-')">+/-</div>
                     <div class="btn_0" id="id_0" onClick="display('0')">0</div>
-                    <div class="btn_comma" id="id_comma">,</div>
+                    <div class="btn_comma" id="id_comma" onClick="display('.')">,</div>
                     <div class="btn_equal" id="id_equal" onclick="equal()">=</div>
                 </div>
             </div>
