@@ -5,10 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>calculatrice</title>
+    <title>calculator</title>
 </head>
 <body>
-    <div class="container">
+
+    <br><br>
+
+
+    
+
+    <div id="id_container" class="container">
+     
         <div class="heade">
             <input class="input_write" id="id_input_write" type="text">
             <input class="result" id="id_input_result" type="text" disabled>
@@ -19,7 +26,7 @@
         </div>
         <br><br><hr>
         <div class="calculator">
-            <div class="Calculator_Scientific">
+            <div id="id_Calculator_Scientific" class="Calculator_Scientific">
                 <div class="div1">
                     <div class="btn_switch" id="id_switch" onclick="Back()">
                         <img src="./source/image/arrow_L.png" alt="">
@@ -57,7 +64,7 @@
                     <div class="btn_exp" id="id_esp">e</div>
                 </div>
             </div>
-            <div class="Calculator_simple">
+            <div id="id_Calculator_simple" class="Calculator_simple">
                 <div class="div1">
                     <div class="btn_sup_input_write" id="id_sup_input_write" onclick="clean()">C</div>
                     <div class="btn_parenthesis" id="id_parenthesis" onclick="parenthesis()">( )</div>
