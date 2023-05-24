@@ -1,0 +1,91 @@
+
+
+let rotat = document.getElementById("id_rotat")
+
+rotat.addEventListener("click", Event => {
+
+   let scientific = document.getElementById("id_Calculator_Scientific")
+   let container = document.getElementById("id_container")
+   let simple = document.getElementById("id_Calculator_simple")
+   scientific.style.display = "none"
+   simple.style.width = "100%"
+   simple.style.marginRight = "15px"
+   container.style.width = "25%"
+   container.style.height = "400px"
+
+})
+
+// DISPLAY
+function display(val){
+    document.getElementById('id_input_write').value += val;
+    return val;
+    }
+    // DELETE
+function clean(){
+    document.getElementById('id_input_write').value = '';
+    document.getElementById('id_input_result').value = '';
+}
+    // EQUAL
+function equal(){
+    let x = document.getElementById('id_input_write').value;
+    let y = eval(x); // envoie une valeur d'achevement
+    document.getElementById('id_input_result').value = y;
+    return y;
+}
+    // COS
+function cos() {
+    let x = document.getElementById('id_input_write').value;
+    let y = Math.cos(x)
+    document.getElementById('id_input_result').value = y;
+}
+    // SIN
+    function sin() {
+        let x = document.getElementById('id_input_write').value;
+        let y = Math.sin(x)
+        document.getElementById('id_input_result').value = y;
+    }
+        // TAN
+function tan() {
+    let x = document.getElementById('id_input_write').value;
+    let y = Math.tan(x)
+    document.getElementById('id_input_result').value = y;
+}
+// PARENTHESIS
+var i = 0;
+function parenthesis(){
+    let z = document.getElementById('id_input_write');
+    if(i == 0){
+        z.value += '(';
+
+        i = 1;
+    }else{
+        z.value += ')';
+        i = 0;
+    }
+}
+}
+// EQUAL
+function equal(){
+    let x = document.getElementById('id_input_write').value;
+    let y = eval(x); // envoie une valeur d'achevement
+    document.getElementById('id_input_result').value = y;
+    return y;
+}
+
+// DELETE
+function clean(){
+    document.getElementById('id_input_write').value = '';
+    document.getElementById('id_input_result').value = '';
+}
+
+// SPACE
+function Back(){
+    let space = document.getElementById('id_input_write');
+    let resultat = space.value;
+    if(resultat.length > 0){
+        resultat = resultat.substring(0, resultat.length-1); // BACK TO THE LAST CHARACTER
+        space.value = resultat;
+    }
+}
+
+
