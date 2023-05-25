@@ -21,25 +21,23 @@
         <div class="calculator">
             <div id="id_Calculator_Scientific" class="Calculator_Scientific">
                 <div class="div1">
-                    <div class="btn_switch" id="id_switch">
+                    <div class="btn_switch" id="id_switch" onclick="Back()">
                         <img src="./source/image/arrow_L.png" alt="">
                     </div>
-
+                    <div class="btn_rad" id="id_rad" onclick="fact()">Rad</div>
                     <div class="btn_square_root" id="id_square_root" onclick="square_root()">
-                    <div class="btn_rad" id="id_rad" onclick="rad()">Rad</div>
-
                         <img src="./source/image/square_root-48_46006.png" alt="">
                     </div>
                 </div>
                 <div class="div1">
-                    <div class="btn_sin" id="id_sin" onClick="display('sin')">Sin</div>
+                    <div class="btn_sin" id="id_sin" onclick="sin()">Sin</div>
                     <div class="btn_cos" id="id_cos" onclick="cos()">Cos</div>
                     <div class="btn_tan" id="id_tan" onclick="tan()">Tan</div>
                 </div>
                 <div class="div1">
-                    <div class="btn_ln" id="id_ln">Ln</div>
-                    <div class="btn_log" id="id_log">Log</div>
-                    <div class="btn_revers" id="id_revers">1/X</div>
+                    <div class="btn_ln" id="id_ln" onclick="ln()">Ln</div>
+                    <div class="btn_log" id="id_log" onclick="log()">Log</div>
+                    <div class="btn_revers" id="id_revers" onclick="inverse()">1/X</div>
                 </div>
                 <div class="div1">
                     <div class="btn_exp_x" id="id_exp_x" onclick="exp()">
@@ -53,7 +51,7 @@
                     </div>
                 </div>
                 <div class="div1">
-                    <div class="btn_absolute" id="id_absolute">|X|</div>
+                    <div class="btn_absolute" id="id_absolute" onclick="absolute()">|X|</div>
                     <div class="btn_pi" id="id_pi" onClick="display('3.14159265359')">π</div>
                     <div class="btn_exp" id="id_esp" onClick="display('2.718281828459045')">e</div>
                 </div>
@@ -88,7 +86,7 @@
                     <div class="btn_moreless" id="id_moreless" onclick="addOperator()">+/-</div>
                     <div class="btn_0" id="id_0" onClick="display('0')">0</div>
                     <div class="btn_comma" id="id_comma" onClick="display('.')">,</div>
-                    <div class="btn_equal" id="id_equal" onclick="recup()">=</div>
+                    <div class="btn_equal" id="id_equal" onclick="recup(); equal()">=</div>
                 </div>
             </div>
         </div>
