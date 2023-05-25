@@ -59,7 +59,7 @@ hr{
     height: 250px;
     margin: 0%;
 }
-.Calculator_Scientific div div{
+.Calculator_Scientific div .btn{
     width: 30%;
     height: 25px;
     margin-left: 18px;
@@ -73,7 +73,7 @@ hr{
     width: 55%;
     height: 250px;
 }
-.Calculator_simple div div{
+.Calculator_simple div .btn{
     width: 22%;
     height: 25px;
     margin-left: 18px;
@@ -82,6 +82,28 @@ hr{
     background-color: #F0F3F4;
     text-align: center;
     padding-top: 8px;
+}
+.btn_comma{
+    display: flex;
+    width: 24%;
+    height: 33px;
+    margin-left: 18px;
+    margin-top: 1px;
+}
+.btn_comma_comma{
+    width: 50%;
+    text-align: center;
+    border-radius: 55% 0% 0% 55%;
+    background-color: #F0F3F4;
+    padding: 3px;
+    
+}
+.btn_point{
+    width: 50%;
+    text-align: center;
+    border-radius: 0% 55% 55% 0%;
+    background-color: #F0F3F4;
+    padding: 3px;
 }
 .div1{
     display: flex;
@@ -121,7 +143,10 @@ hr{
     color: #ffffff;
     background-color: #038D00 !important;
 }
-.Calculator_simple .div1 div:hover , .Calculator_Scientific .div1 div:hover {
+.Calculator_simple .div1 .btn:hover , .Calculator_Scientific .div1 .btn:hover {
+    background-color: #c0c2c2;
+}
+.Calculator_simple .div1 .btn_point:hover , .Calculator_simple .div1 .btn_comma_comma:hover {
     background-color: #c0c2c2;
 }
 .btn_equal:hover {
