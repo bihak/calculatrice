@@ -1,4 +1,5 @@
 
+
 // clic du bouton
 let rotat = document.getElementById("id_rotat")
 let scientific = document.getElementById("id_Calculator_Scientific")
@@ -21,7 +22,7 @@ rotat.addEventListener("click", Event => {
     }
 })
 
-// DISPLAY
+    // DISPLAY
 function display(val){
     document.getElementById('id_input_write').value += val;
     return val;
@@ -30,6 +31,24 @@ function display(val){
 function clean(){
     document.getElementById('id_input_write').value = '';
     document.getElementById('id_input_result').value = '';
+}
+// recuperer chaine 
+function recup() {
+    let tabnomber = []
+    let taboperateur = []
+    let input_write = document.getElementById('id_input_write');
+    let resultat = input_write.value
+    let res = resultat.split(/[+\-\/\*]/)
+    for (let j = 0 ; j < resultat.length ; j++){
+        let caractere = resultat.charAt(j)
+        if (caractere === "+" || caractere === "/" ||caractere === "-" || caractere === "*") {
+            taboperateur.push(caractere)
+        }
+    }
+    for (let i = 0 ; i < res.length ; i++){
+        tabnomber.push(res[i])
+    }
+    sin(tabnomber,taboperateur)
 }
     // EQUAL
 function equal(){
@@ -53,10 +72,11 @@ function cos() {
     document.getElementById('id_input_result').value = y;
 }
     // SIN
-    function sin() {
-        let x = document.getElementById('id_input_write').value;
-        let y = Math.sin(x)
-        document.getElementById('id_input_result').value = y;
+    function sin(tabnomber,taboperateur) {
+        console.log("tab1 les nombre ::" + tabnomber)
+        console.log("tab 2 les ope ::" + taboperateur)
+        let y = Math.sin()
+        console.log("sin ::" + y)
     }
     // TAN
 function tan() {
@@ -104,7 +124,6 @@ function parenthesis(){
         i = 0;
     }
 }
-
 // EQUAL
 function equal(){
     let x = document.getElementById('id_input_write').value;
@@ -128,6 +147,26 @@ function Back(){
         space.value = resultat;
     }
 }
+
+// recuperer chaine 
+function recup() {
+    let tabnomber = []
+    let taboperateur = []
+    let input_write = document.getElementById('id_input_write');
+    let resultat = input_write.value
+    let res = resultat.split(/[+\-\/\*]/)
+    for (let j = 0 ; j < resultat.length ; j++){
+        let caractere = resultat.charAt(j)
+        if (caractere === "+" || caractere === "/" ||caractere === "-" || caractere === "*") {
+            taboperateur.push(caractere)
+        }
+    }
+    for (let i = 0 ; i < res.length ; i++){
+        tabnomber.push(res[i])
+    }
+    sin(tabnomber,taboperateur)
+}
+
 // OPERATOR + / -
 function addOperator(){
     let a = document.getElementById('id_input_write');
@@ -135,3 +174,4 @@ function addOperator(){
     n = n * -1;
     a.value = n;
  };
+

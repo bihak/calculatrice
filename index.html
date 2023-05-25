@@ -9,7 +9,6 @@
 </head>
 <body>
     <div id="id_container" class="container">
-     
         <div class="heade">
             <input class="input_write" id="id_input_write" type="text" >
             <input class="result" id="id_input_result" type="text" disabled>
@@ -24,7 +23,6 @@
                 <div class="div1">
                     <div class="btn_switch" id="id_switch">
                         <img src="./source/image/arrow_L.png" alt="">
-                        <img src="./source/image/arrow_R.png" alt="">
                     </div>
 
                     <div class="btn_square_root" id="id_square_root" onclick="square_root()">
@@ -34,7 +32,7 @@
                     </div>
                 </div>
                 <div class="div1">
-                    <div class="btn_sin" id="id_sin" onclick="sin()">Sin</div>
+                    <div class="btn_sin" id="id_sin" onClick="display('sin')">Sin</div>
                     <div class="btn_cos" id="id_cos" onclick="cos()">Cos</div>
                     <div class="btn_tan" id="id_tan" onclick="tan()">Tan</div>
                 </div>
@@ -90,7 +88,7 @@
                     <div class="btn_moreless" id="id_moreless" onclick="addOperator()">+/-</div>
                     <div class="btn_0" id="id_0" onClick="display('0')">0</div>
                     <div class="btn_comma" id="id_comma" onClick="display('.')">,</div>
-                    <div class="btn_equal" id="id_equal" onclick="equal()">=</div>
+                    <div class="btn_equal" id="id_equal" onclick="recup()">=</div>
                 </div>
             </div>
         </div>
