@@ -1,4 +1,6 @@
 
+
+// clic du bouton
 let rotat = document.getElementById("id_rotat")
 let scientific = document.getElementById("id_Calculator_Scientific")
 let container = document.getElementById("id_container")
@@ -18,8 +20,6 @@ rotat.addEventListener("click", Event => {
         container.style.width = "50%"
         container.style.height = "370px"
     }
-    
-
 })
 
     // DISPLAY
@@ -57,6 +57,14 @@ function equal(){
     document.getElementById('id_input_result').value = y;
     return y;
 }
+
+    // RACINE CARRE
+function square_root() {
+   let x = document.getElementById('id_input_write').value;
+   let y = Math.sqrt(x)
+   document.getElementById('id_input_result').value = y;
+}
+
     // COS
 function cos() {
     let x = document.getElementById('id_input_write').value;
@@ -70,12 +78,39 @@ function cos() {
         let y = Math.sin()
         console.log("sin ::" + y)
     }
-        // TAN
+    // TAN
 function tan() {
     let x = document.getElementById('id_input_write').value;
     let y = Math.tan(x)
     document.getElementById('id_input_result').value = y;
 }
+    // EXP
+function exp() {
+    let x = document.getElementById('id_input_write').value;
+    let y = Math.exp(x)
+    document.getElementById('id_input_result').value = y;
+    }
+    // ABSOLUTE
+function absolute() {
+    let x = document.getElementById('id_input_write').value;
+    let y = Math.abs(x)
+    document.getElementById('id_input_result').value = y;
+}
+
+    // CARRE
+function carre() {
+    let x = document.getElementById('id_input_write').value;
+    let y = (x*x)
+    document.getElementById('id_input_result').value = y;
+    }
+    // POWER
+function power() {
+    let x = document.getElementById('id_input_write').value (x);
+    let y = document.getElementById('id_input_write').value (y);
+    let z = Math.pow(x,y);
+    document.getElementById('id_input_result').value = z;
+    }
+
 // PARENTHESIS
 var i = 0;
 function parenthesis(){
@@ -89,6 +124,20 @@ function parenthesis(){
         i = 0;
     }
 }
+// EQUAL
+function equal(){
+    let x = document.getElementById('id_input_write').value;
+    let y = eval(x); // envoie une valeur d'achevement
+    document.getElementById('id_input_result').value = y;
+    return y;
+}
+
+// DELETE
+function clean(){
+    document.getElementById('id_input_write').value = '';
+    document.getElementById('id_input_result').value = '';
+}
+
 // SPACE
 function Back(){
     let space = document.getElementById('id_input_write');
@@ -98,6 +147,7 @@ function Back(){
         space.value = resultat;
     }
 }
+
 // recuperer chaine 
 function recup() {
     let tabnomber = []
@@ -116,3 +166,12 @@ function recup() {
     }
     sin(tabnomber,taboperateur)
 }
+
+// OPERATOR + / -
+function addOperator(){
+    let a = document.getElementById('id_input_write');
+    let n = a.value;
+    n = n * -1;
+    a.value = n;
+ };
+
