@@ -1,18 +1,24 @@
 
 // clic du bouton
 let rotat = document.getElementById("id_rotat")
+let scientific = document.getElementById("id_Calculator_Scientific")
+let container = document.getElementById("id_container")
+let simple = document.getElementById("id_Calculator_simple")
 
 rotat.addEventListener("click", Event => {
 
-   let scientific = document.getElementById("id_Calculator_Scientific")
-   let container = document.getElementById("id_container")
-   let simple = document.getElementById("id_Calculator_simple")
-   scientific.style.display = "none"
-   simple.style.width = "100%"
-   simple.style.marginRight = "15px"
-   container.style.width = "25%"
-   container.style.height = "400px"
-
+    if (scientific.style.display != "none") {
+        scientific.style.display = "none"
+        simple.style.width = "100%"
+        simple.style.marginRight = "15px"
+        container.style.width = "25%"
+        container.style.height = "400px"
+    }else{
+        scientific.style.display = "block"
+        simple.style.width = "55%"
+        container.style.width = "50%"
+        container.style.height = "370px"
+    }
 })
 
 // DISPLAY
@@ -122,5 +128,10 @@ function Back(){
         space.value = resultat;
     }
 }
-
-
+// OPERATOR + / -
+function addOperator(){
+    let a = document.getElementById('id_input_write');
+    let n = a.value;
+    n = n * -1;
+    a.value = n;
+ };
