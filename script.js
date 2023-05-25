@@ -21,12 +21,11 @@ rotat.addEventListener("click", Event => {
         container.style.height = "370px"
     }
 })
-
     // DISPLAY
 function display(val){
     document.getElementById('id_input_write').value += val;
     return val;
-    }
+}
     // DELETE
 function clean(){
     document.getElementById('id_input_write').value = '';
@@ -39,7 +38,16 @@ function equal(){
     document.getElementById('id_input_result').value = y;
     return y;
 }
-
+    // FACTORIELLE
+function fact(){
+    let i = '';
+    let r = document.getElementById('id_input_write').value;
+    f = 1;
+    for(i = 1; i <= r; i++){
+        f = f * i;
+    }
+    document.getElementById('id_input_result').value = f;
+}
     // RACINE CARRE
 function square_root(chiffre) {
     let y = Math.sqrt(chiffre)
@@ -87,7 +95,6 @@ function absolute(chiffre) {
     let y = Math.abs(chiffre)
     return y
 }
-
     // CARRE
 function carre(chiffre) {
     let y = (chiffre * chiffre)
@@ -120,6 +127,7 @@ function parenthesis(){
         i = 0;
     }
 }
+
 // EQUAL
 function equal(tabnomber,taboperateur){
     let opresult = []
@@ -152,8 +160,7 @@ function Back(){
         space.value = resultat;
     }
 }
-
-// recuperer chaine 
+    // recuperer chaine 
 function recup() {
     let input_write = document.getElementById('id_input_write');
     let resultat = input_write.value
@@ -243,8 +250,7 @@ function recup() {
     }
     equal(tabnomber,taboperateur)
 }
-
-// OPERATOR + / -
+    // OPERATOR + / -
 function addOperator(){
     let a = document.getElementById('id_input_write');
     let n = a.value;
