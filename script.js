@@ -115,18 +115,19 @@ function fact(chiffre){
     return y
 }
 // PARENTHESIS
-var i = 0;
+let i = 0;
 function parenthesis(){
     let z = document.getElementById('id_input_write');
     if(i == 0){
         z.value += '(';
-
         i = 1;
     }else{
         z.value += ')';
         i = 0;
     }
 }
+
+
 
 // EQUAL
 function equal(tabnomber,taboperateur){
@@ -141,6 +142,9 @@ function equal(tabnomber,taboperateur){
     }
     let x = opresult.join("")
     let y = eval(x);
+    if (x.includes("/0")) {
+        y = "Erreur : Division par zéro";
+    }
     document.getElementById('id_input_result').value = y;
     return y;
 }
@@ -160,25 +164,18 @@ function Back(){
         space.value = resultat;
     }
 }
+
     // recuperer chaine 
 function recup() {
     let input_write = document.getElementById('id_input_write');
     let resultat = input_write.value
-    // let tabnomber = resultat.match(/-?\d+(\.\d+)?/g);
-    // let tableau = resultat.match(/-?\d+(\.\d+)?|[+÷×-]/g);
-    let taboperateur = resultat.match(/[-+÷×]/g);
-    let res = resultat.split(/[+\-\/\*]/)
-    for (let j = 0 ; j < resultat.length ; j++){
-        let caractere = resultat.charAt(j)
-        if (caractere === "+" || caractere === "/" ||caractere === "-" || caractere === "*") {
-            taboperateur.push(caractere)
-        }
-    }
-    for (let i = 0 ; i < res.length ; i++){
-        tabnomber.push(res[i])
-    }
+    let taboperateur = resultat.match(/[+\-*\/](?![^(]*\))/g)
+    let tabnomber = resultat
+    .replace(/(\d+(?:\.\d+)?)-/g, "$1,-") 
+    .match(/(?:\b\w+\(-?\d+(?:\.\d+)?\))|(?:-?\d+(?:\.\d+)?(?:²|√)?)/g)
+
     for (let k = 0 ; k < tabnomber.length ; k++){
-        if (tabnomber[k].includes("Fac")||tabnomber[k].includes("√")||tabnomber[k].includes("sin")||
+        if (tabnomber[k].includes("Fac")||tabnomber[k].includes("Sqrt")||tabnomber[k].includes("sin")||
             tabnomber[k].includes("cos")||tabnomber[k].includes("tan")||tabnomber[k].includes("Ln")||
             tabnomber[k].includes("Log")||tabnomber[k].includes("Inv")||tabnomber[k].includes("exp")||
             tabnomber[k].includes("²")||tabnomber[k].includes("Pow")||tabnomber[k].includes("Abs")){
@@ -187,7 +184,7 @@ function recup() {
                     let chiffre = nombre.match(/\d+/);
                     tabnomber[k]=fact(chiffre)
                 }
-                else if(tabnomber[k].includes("√")) {
+                else if(tabnomber[k].includes("Sqrt")) {
                     let nombre = tabnomber[k]
                     let chiffre = nombre.match(/\d+/);
                     tabnomber[k]=square_root(chiffre)
