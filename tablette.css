@@ -84,10 +84,37 @@
         text-align: center;
         padding-top: 8px;
     }
+
     .div1{
         display: flex;
         margin-top: 10px;
     }
+
+    .btn_comma{
+        display: flex;
+        width: 24%;
+        height: 33px;
+        margin-left: 18px;
+        margin-top: 1px;
+    }
+
+    .btn_comma_comma{
+        width: 50%;
+        text-align: center;
+        border-radius: 55% 0% 0% 55%;
+        background-color: #F0F3F4;
+        padding: 3px;
+        
+    }
+    
+    .btn_point{
+        width: 50%;
+        text-align: center;
+        border-radius: 0% 55% 55% 0%;
+        background-color: #F0F3F4;
+        padding: 3px;
+    }
+
     .btn_switch img{
         margin-top: 5px;
         display: block;

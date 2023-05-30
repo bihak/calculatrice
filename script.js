@@ -11,7 +11,6 @@ rotat.addEventListener("click", Event => {
     if (scientific.style.display != "none") {
         scientific.style.display = "none"
         simple.style.width = "100%"
-        simple.style.marginRight = "15px"
         container.style.width = "25%"
         container.style.height = "400px"
     }else{
@@ -68,11 +67,6 @@ function tan(chiffre) {
         let y = Math.tan(chiffre)
         return y
 }
-// LOGARITHME NEPERIEN
-function ln(chiffre){
-    let y = Math.log(chiffre);
-    return y
-}
 
     // LOG
 function log(chiffre){
@@ -80,11 +74,6 @@ function log(chiffre){
     return y
 }
 
-    // INVERSE
-function inverse(chiffre){
-    let y = (1/chiffre);
-    return y
-}
     // EXP
 function exp(chiffre) {
     let y = Math.exp(chiffre)
@@ -95,25 +84,13 @@ function absolute(chiffre) {
     let y = Math.abs(chiffre)
     return y
 }
-    // CARRE
-function carre(chiffre) {
-    let y = (chiffre * chiffre)
-    return y
-    }
+
     // POWER
 function power(chiffre , exposant) {
     let y = Math.pow(chiffre, exposant);
     return y
     }
-// FACTORIELLE
-function fact(chiffre){
-    let i = '';
-    y = 1;
-    for(i = 1; i <= chiffre; i++){
-        y = y * i;
-    }
-    return y
-}
+    
 // PARENTHESIS
 let i = 0;
 function parenthesis(){
@@ -126,8 +103,6 @@ function parenthesis(){
         i = 0;
     }
 }
-
-
 
 // EQUAL
 function equal(tabnomber,taboperateur){
