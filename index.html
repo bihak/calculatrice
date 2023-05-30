@@ -23,14 +23,9 @@
         <div class="calculator">
             <div id="id_Calculator_Scientific" class="Calculator_Scientific">
                 <div class="div1">
-
-                    <div class="btn_switch btn" id="id_switch" onclick="Back()">
-                        <img src="./source/image/arrow_L.png" alt="">
-                    </div>
-                    <div class="btn_rad btn" id="id_rad" onClick="display('Fac')">Fac</div>
-                    <div class="btn_square_root btn" id="id_square_root"  onClick="display('Sqrt')">
-                        <img src="./source/image/square_root-48_46006.png" alt="">
-                    </div>
+                    <div class="btn_tan btn" id="id_tan" onClick="display('asin')">Asin</div>
+                    <div class="btn_tan btn" id="id_tan" onClick="display('acos')">Acos</div>
+                    <div class="btn_tan btn" id="id_tan" onClick="display('atan')">Atan</div>
                 </div>
                 <div class="div1">
                     <div class="btn_sin btn" id="id_sin" onClick="display('sin')">Sin</div>
@@ -38,16 +33,18 @@
                     <div class="btn_tan btn" id="id_tan" onClick="display('tan')">Tan</div>
                 </div>
                 <div class="div1">
-                    <div class="btn_ln btn" id="id_ln" onClick="display('Ln')">Ln</div>
+                    <div class="btn_rad btn" id="id_rad" onClick="display('Fac')">Fac</div>
                     <div class="btn_log btn" id="id_log" onClick="display('Log')">Log</div>
-                    <div class="btn_revers btn" id="id_revers" onClick="display('Inv')">1/X</div>
+                    <div class="btn_square_root btn" id="id_square_root"  onClick="display('&radic;')">
+                        &radic;
+                    </div>
                 </div>
                 <div class="div1">
                     <div class="btn_exp_x btn" id="id_exp_x" onClick="display('exp')">
                         <img src="./source/image/e_x.png" alt="">
                     </div>
-                    <div class="btn_carre btn" id="id_carre" onClick="display('²')">
-                        <img src="./source/image/x_2.png" alt="">
+                    <div class="btn_carre btn" id="id_carre">
+                        &#8731;
                     </div>
                     <div class="btn_power btn" id="id_power" onClick="display('Pow')">
                         <img src="./source/image/x_y.png" alt="">
@@ -61,7 +58,13 @@
             </div>
             <div id="id_Calculator_simple" class="Calculator_simple">
                 <div class="div1">
-                    <div class="btn_sup_input_write btn" id="id_sup_input_write" onclick="clean()">C</div>
+                    <div class="btn_sup_input_write" id="id_sup_input_write">
+                        <div class="btn_switch" id="id_switch" onclick="Back()">
+                            <img src="./source/image/arrow_L.png" alt="">        
+                        </div>
+                        <div class="btn_C" id="id_comma" onclick="clean()">C</div>
+                    </div>
+
                     <div class="btn_parenthesis btn" id="id_parenthesis" onclick="parenthesis()">( )</div>
                     <div class="btn_percentage btn" id="id_percentage" onclick="percentage()">%</div>
 

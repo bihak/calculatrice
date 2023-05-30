@@ -11,7 +11,6 @@ rotat.addEventListener("click", Event => {
     if (scientific.style.display != "none") {
         scientific.style.display = "none"
         simple.style.width = "100%"
-        simple.style.marginRight = "15px"
         container.style.width = "25%"
         container.style.height = "400px"
     }else{
@@ -31,6 +30,7 @@ function clean(){
     document.getElementById('id_input_write').value = '';
     document.getElementById('id_input_result').value = '';
 }
+
 // FACTORIELLE
 function fac(chiffre){
     y = 1;
@@ -39,6 +39,7 @@ function fac(chiffre){
     }
     return y
 }
+
 // PARENTHESIS
 let i = 0;
 function parenthesis(){
@@ -55,6 +56,7 @@ function parenthesis(){
 function equal(chaine){
     let y = eval(chaine);
     if (chaine.includes("/0")) {
+
         y = "Erreur : Division par zéro";
     }
     document.getElementById('id_input_result').value = y;

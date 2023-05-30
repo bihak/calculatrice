@@ -85,6 +85,7 @@ hr{
     text-align: center;
     padding-top: 8px;
 }
+
 .btn_comma{
     display: flex;
     width: 24%;
@@ -105,20 +106,42 @@ hr{
     text-align: center;
     border-radius: 0% 55% 55% 0%;
     background-color: #F0F3F4;
-    padding: 3px;
+    padding-top: 8px;
 }
 .div1{
     display: flex;
     margin-top: 10px;
 }
+
+.btn_C{
+    width: 50%;
+    text-align: center;
+    border-radius: 0% 55% 55% 0%;
+    background-color: #F0F3F4;
+    padding-top: 8px;
+}
+
+.btn_C:hover{
+    background-color: #c0c2c2;
+}
+
+.btn_switch{
+    width: 50%;
+    text-align: center;
+    border-radius: 55% 0% 0% 55%;
+    background-color: #F0F3F4;
+    padding-top: 8px;
+}
+
 .btn_switch img{
+    width: 15px;
     margin-top: 5px;
     display: block;
-    width: 25%;
     height: 10px;
     margin-left: auto;
     margin-right: auto;
 }
+
 .btn_square_root img{
     width: 35%;
     height: 20px;
@@ -137,6 +160,9 @@ hr{
 }
 .btn_sup_input_write{
     color: red;
+    display: inline-flex;
+    width: 22%;
+    margin-left: 18px;
 }
 .btn_parenthesis,.btn_percentage,.btn_division,.btn_multi,.btn_soustraction,.btn_addition{
     color:#038D00;
@@ -154,12 +180,13 @@ hr{
 .btn_equal:hover {
     background-color: #015200 !important;
 }
+
+.btn_switch:hover{
+    background-color: #c0c2c2;
+}
 .Calculator_simple .btn_equal:hover{
     background-color: #c0c2c2;
     font-size: 0.9em;
 }
-<<<<<<< HEAD:computer.css
 
 }
-=======
->>>>>>> develope:style.css
