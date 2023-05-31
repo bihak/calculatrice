@@ -38,21 +38,10 @@ function fac(chiffre){
     return y
 }
 
-// PARENTHESIS
-let i = 0;
-function parenthesis(){
-    let z = document.getElementById('id_input_write');
-    if(i == 0){
-        z.value += '(';
-        i = 1;
-    }else{
-        z.value += ')';
-        i = 0;
-    }
-}
 
 function equal(chaine){
     let y = eval(chaine);
+    console.log(y)
     if (chaine.includes("/0")) {
 
         y = "Erreur : Division par zéro";
@@ -77,11 +66,13 @@ function pourcentage(chiffre) {
     }
     return y;
 }
+
 function pourcentag(chiffre) {
     let y
     y = chiffre/100
     return y;
 }
+
 
 // DELETE
 function clean(){
@@ -104,6 +95,7 @@ function recup() {
     let input_write = document.getElementById('id_input_write');
     let resultat = input_write.value
     let chaine = resultat
+
     let regex2 = /^[^+\-*/]*[-+*/].*%/;
     const regexNombre = /(\d+)\s*%/;
     if (chaine.includes('%')==true){
@@ -115,6 +107,7 @@ function recup() {
             }
             chaine = chaine.replace(number+'%', 'pourcentag('+number+')')
         }else{
+
     const regex = /(\d+\s*[-+*/]\s*\d+%)/g;
     let tab = chaine.match(regex);
     let ancientab = chaine.match(regex);
@@ -122,6 +115,7 @@ function recup() {
         if (tab[i].includes('%')==true){
             tab[i] = tab[i].replace('%','')
         }
+
     }
     for (let i = 0; i < tab.length; i++) {
         tab[i] = tab[i].match(/(\d+|\D)/g);
@@ -137,13 +131,16 @@ function recup() {
         if (tab[i][1].includes('/')==true) {
         tab[i][1]='4'
     }
+
     }
     for (let i = 0; i < ancientab.length; i++) {
         if (chaine.includes(ancientab[i])==true) {
         chaine = chaine.replace(ancientab[i], 'pourcentage([('+tab[i][0]+'),('+tab[i][1]+'),('+tab[i][2]+')])')
     }
+
     }
     }
+
     }
     
     const fonctions = ["sqrt", "sin","asin","acos","atan", "cos", "tan", "log", "exp", "cbrt", "pow", "abs"];
@@ -153,12 +150,4 @@ function recup() {
     });
     equal(chaine)
 }
-    // OPERATOR + / -
-function addOperator(){
-    let a = document.getElementById('id_input_write');
-    let n = a.value;
-    n = n * -1;
-    a.value = n;
-};
-
 

@@ -33,25 +33,14 @@
         border-bottom: solid 1px #D4D4D4;
     }
     .btn_rotat{
-        width: 25px;
-        height: 25px;
-        padding: 0%;
-        border-radius: 50%;
-        border-color: #ffffff00;
-        float: right;
-        margin-right:10%;
-        margin-top: 10px;
         display: none;
     }
-    .btn_rotat img{
-        width: 100%;
-        height: 100%;
-    }
-
     .btn{
         font-size: small;
     }
-
+    .btn{
+        font-size: small;
+    }
     hr{
         width: 90%;
         border: solid 1px #D4D4D4;
@@ -59,7 +48,6 @@
     .calculator{
         width: 100%;
         display: inline-flex;
-
     }
     .Calculator_Scientific{
         width: 50%;
@@ -93,7 +81,6 @@
         display: flex;
         margin-top: 10px;
     }
-
     .btn_comma{
         width: 50%;
         text-align: center;
@@ -116,7 +103,6 @@
         background-color: #F0F3F4;
         font-size: small;
     }
-
     .btn_switch{
         width: 50%;
         text-align: center;
@@ -160,11 +146,9 @@
         background-color: #F0F3F4;
         padding-top: 8px;
     }
-    
     .btn_parenthesis:hover{
         background-color: #c0c2c2;
-    }
-    
+  }
     .btn_parenthesis2{
         color:#038D00;
         width: 50%;
@@ -177,11 +161,9 @@
     .btn_parenthesis2:hover{
         background-color: #c0c2c2;
     }
-
     .btn_0, .btn_1, .btn_2, .btn_3, .btn_4, .btn_5, .btn_6, .btn_7, .btn_8, .btn_9, .btn_moreless{
         padding-top: 8px;
     }
-
     .btn_equal{
         color: #ffffff;
         background-color: #038D00 !important;

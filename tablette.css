@@ -34,15 +34,13 @@
     .btn_rotat{
         display: none;
     }
-    .btn_rotat img{
-        width: 100%;
-        height: 100%;
-    }
 
     .btn{
         font-size: 15px;
     }
-
+    .btn{
+        font-size: 15px;
+    }
     hr{
         width: 90%;
         border: solid 1px #D4D4D4;
@@ -50,7 +48,6 @@
     .calculator{
         width: 100%;
         display: inline-flex;
-
     }
     .Calculator_Scientific{
         width: 50%;
@@ -84,7 +81,6 @@
         display: flex;
         margin-top: 10px;
     }
-
     .btn_comma{
         width: 50%;
         text-align: center;
@@ -124,11 +120,11 @@
         margin-right: auto;
     }
     .btn_exp_x img{
-        width: 50%;
+        width: 30%;
         height: 20px;
     }
     .btn_power img{
-        width: 50%;
+        width: 30%;
         height: 20px;
     }
     .btn_sup_input_write{
@@ -140,7 +136,6 @@
         color:#038D00;    
         padding-top: 8px;
     }
-
     .btn_parenthesis{
         color:#038D00;
         width: 50%;
@@ -153,7 +148,6 @@
     .btn_parenthesis:hover{
         background-color: #c0c2c2;
     }
-    
     .btn_parenthesis2{
         color:#038D00;
         width: 50%;
@@ -162,7 +156,6 @@
         background-color: #F0F3F4;
         padding-top: 8px;
     }
-    
     .btn_parenthesis2:hover{
         background-color: #c0c2c2;
     }
