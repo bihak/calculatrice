@@ -31,6 +31,7 @@ body{
     border: none;
     background-color: #FBFCFC;
     display: block;
+    border-bottom: solid 1px #D4D4D4;
 }
 .btn_rotat{
     width: 25px;

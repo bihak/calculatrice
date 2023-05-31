@@ -38,6 +38,7 @@ function fac(chiffre){
     return y
 }
 
+
 function equal(chaine){
     let y = eval(chaine);
     console.log(y)
@@ -66,6 +67,13 @@ function pourcentage(chiffre) {
     return y;
 }
 
+function pourcentag(chiffre) {
+    let y
+    y = chiffre/100
+    return y;
+}
+
+
 // DELETE
 function clean(){
     document.getElementById('id_input_write').value = '';
@@ -88,7 +96,18 @@ function recup() {
     let resultat = input_write.value
     let chaine = resultat
 
-    if (chaine.includes('%')==true) {
+    let regex2 = /^[^+\-*/]*[-+*/].*%/;
+    const regexNombre = /(\d+)\s*%/;
+    if (chaine.includes('%')==true){
+        if (regex2.test(chaine)==false){
+            const matchNombre = chaine.match(regexNombre);
+            let number = null;
+            if (matchNombre && matchNombre.length > 1) {
+                number = matchNombre[1];
+            }
+            chaine = chaine.replace(number+'%', 'pourcentag('+number+')')
+        }else{
+
     const regex = /(\d+\s*[-+*/]\s*\d+%)/g;
     let tab = chaine.match(regex);
     let ancientab = chaine.match(regex);
@@ -96,6 +115,7 @@ function recup() {
         if (tab[i].includes('%')==true){
             tab[i] = tab[i].replace('%','')
         }
+
     }
     for (let i = 0; i < tab.length; i++) {
         tab[i] = tab[i].match(/(\d+|\D)/g);
@@ -111,12 +131,16 @@ function recup() {
         if (tab[i][1].includes('/')==true) {
         tab[i][1]='4'
     }
+
     }
     for (let i = 0; i < ancientab.length; i++) {
         if (chaine.includes(ancientab[i])==true) {
         chaine = chaine.replace(ancientab[i], 'pourcentage([('+tab[i][0]+'),('+tab[i][1]+'),('+tab[i][2]+')])')
     }
-    }console.log(tab)
+
+    }
+    }
+
     }
     
     const fonctions = ["sqrt", "sin","asin","acos","atan", "cos", "tan", "log", "exp", "cbrt", "pow", "abs"];
@@ -124,6 +148,6 @@ function recup() {
         const regex = new RegExp('\\b' + fonction + '\\b', 'g');
         chaine = chaine.replace(regex, 'Math.' + fonction);
     });
-    console.log(chaine)
     equal(chaine)
 }
+
