@@ -25,11 +25,6 @@ function display(val){
     document.getElementById('id_input_write').value += val;
     return val;
 }
-    // DELETE
-function clean(){
-    document.getElementById('id_input_write').value = '';
-    document.getElementById('id_input_result').value = '';
-}
 
 // FACTORIELLE
 function fac(chiffre){
@@ -38,19 +33,6 @@ function fac(chiffre){
         y = y * i;
     }
     return y
-}
-
-// PARENTHESIS
-let i = 0;
-function parenthesis(){
-    let z = document.getElementById('id_input_write');
-    if(i == 0){
-        z.value += '(';
-        i = 1;
-    }else{
-        z.value += ')';
-        i = 0;
-    }
 }
 
 function equal(chaine){
@@ -98,10 +80,3 @@ function recup() {
     });
     equal(chaine)
 }
-    // OPERATOR + / -
-function addOperator(){
-    let a = document.getElementById('id_input_write');
-    let n = a.value;
-    n = n * -1;
-    a.value = n;
-};
