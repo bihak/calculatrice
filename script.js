@@ -46,6 +46,10 @@ function equal(chaine){
 
         y = "Erreur : Division par zéro";
     }
+    if (chaine === ""){
+
+        y = "Veuillez rentrer une operation";
+    }
     document.getElementById('id_input_result').value = y;
     return y;
 }
