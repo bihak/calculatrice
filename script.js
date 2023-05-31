@@ -38,19 +38,6 @@ function fac(chiffre){
     return y
 }
 
-// PARENTHESIS
-let i = 0;
-function parenthesis(){
-    let z = document.getElementById('id_input_write');
-    if(i == 0){
-        z.value += '(';
-        i = 1;
-    }else{
-        z.value += ')';
-        i = 0;
-    }
-}
-
 function equal(chaine){
     let y = eval(chaine);
     console.log(y)
@@ -140,11 +127,3 @@ function recup() {
     console.log(chaine)
     equal(chaine)
 }
-    // OPERATOR + / -
-function addOperator(){
-    let a = document.getElementById('id_input_write');
-    let n = a.value;
-    n = n * -1;
-    a.value = n;
-};
-
