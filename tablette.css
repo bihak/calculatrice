@@ -1,15 +1,14 @@
 @media screen and (min-width: 568px) and (max-width: 768px) {
     body{
         width: 100vw;
-        height: 100vh;
         margin: 0%;
         padding: 0%;
     }
     .container{
-        width:55%;
-        height: 370px;
+        width: 70%;
         background-color: #FBFCFC;
         border-radius: 25px;
+        margin-top: 10%;
         margin-left: auto;
         margin-right: auto;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -30,40 +29,37 @@
         border: none;
         background-color: #FBFCFC;
         display: block;
+        border-bottom: solid 1px #D4D4D4;
     }
     .btn_rotat{
-        width: 25px;
-        height: 25px;
-        padding: 0%;
-        border-radius: 50%;
-        border-color: #ffffff00;
-        float: right;
-        margin-right:10%;
-        margin-top: 10px;
+        display: none;
     }
     .btn_rotat img{
         width: 100%;
         height: 100%;
     }
+
+    .btn{
+        font-size: 15px;
+    }
+
     hr{
         width: 90%;
         border: solid 1px #D4D4D4;
     }
     .calculator{
-        display: flex;
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
+        width: 100%;
+        display: inline-flex;
+
     }
     .Calculator_Scientific{
-        width: 45%;
+        width: 50%;
         height: 250px;
         margin: 0%;
     }
     .Calculator_Scientific div div{
-        width: 30%;
+        width: 100%;
         height: 25px;
-        margin-left: 18px;
         border: solid 1px #F0F3F4;
         border-radius: 25px;
         background-color: #F0F3F4;
@@ -71,56 +67,114 @@
         padding-top: 8px;
     }
     .Calculator_simple{
-        width: 55%;
+        width: 50% !important;
         height: 250px;
+        margin-left: 12px;
     }
     .Calculator_simple div div{
-        width: 22%;
+        width: 100%;
         height: 25px;
-        margin-left: 18px;
         border: solid 1px #F0F3F4;
         border-radius: 25px;
         background-color: #F0F3F4;
         text-align: center;
-        padding-top: 8px;
     }
     .div1{
+        width: 100%;
         display: flex;
         margin-top: 10px;
     }
+
+    .btn_comma{
+        width: 50%;
+        text-align: center;
+        background-color: #F0F3F4;
+        border-radius: 25px;
+        padding-top: 8px;
+    }
+    .btn_point{
+        width: 50%;
+        text-align: center;
+        background-color: #F0F3F4;
+        border-radius: 25px;
+        padding-top: 8px;
+    }
+
+    .btn_C{
+        margin-top: 8px;
+        text-align: center;
+        border-radius: 0% 55% 55% 0%;
+        background-color: #F0F3F4;
+    }
+
+    .btn_switch{
+        width: 50%;
+        text-align: center;
+        border-radius: 55% 0% 0% 55%;
+        background-color: #F0F3F4;
+        padding-top: 8px;
+    }
+
     .btn_switch img{
+        width: 15px;
         margin-top: 5px;
         display: block;
-        width: 50%;
         height: 10px;
         margin-left: auto;
         margin-right: auto;
     }
-    .btn_square_root img{
-        width: 35%;
-        height: 20px;
-    }
     .btn_exp_x img{
-        width: 80%;
-        height: 20px;
-    }
-    .btn_carre img{
-        width: 80%;
+        width: 50%;
         height: 20px;
     }
     .btn_power img{
-        width: 80%;
+        width: 50%;
         height: 20px;
     }
     .btn_sup_input_write{
         color: red;
+        display: inline-flex;
+        width: 22%;
     }
-    .btn_parenthesis,.btn_percentage,.btn_division,.btn_multi,.btn_soustraction,.btn_addition{
+    .btn_percentage,.btn_division,.btn_multi,.btn_soustraction,.btn_addition{
+        color:#038D00;    
+        padding-top: 8px;
+    }
+
+    .btn_parenthesis{
         color:#038D00;
+        width: 50%;
+        text-align: center;
+        border-radius: 55% 0% 0% 55%;
+        background-color: #F0F3F4;
+        padding-top: 8px;
     }
+    
+    .btn_parenthesis:hover{
+        background-color: #c0c2c2;
+    }
+    
+    .btn_parenthesis2{
+        color:#038D00;
+        width: 50%;
+        text-align: center;
+        border-radius: 0% 55% 55% 0%;
+        background-color: #F0F3F4;
+        padding-top: 8px;
+    }
+    
+    .btn_parenthesis2:hover{
+        background-color: #c0c2c2;
+    }
+
+    .btn_0, .btn_1, .btn_2, .btn_3, .btn_4, .btn_5, .btn_6, .btn_7, .btn_8, .btn_9, .btn_moreless{
+        padding-top: 8px;
+    }
+
     .btn_equal{
         color: #ffffff;
         background-color: #038D00 !important;
+        padding-top: 8px;
     }
     .Calculator_simple .div1 div:hover , .Calculator_Scientific .div1 div:hover {
         background-color: #c0c2c2;

@@ -2,7 +2,6 @@
 
 body{
     width: 100vw;
-    height: 100vh;
     margin: 0%;
     padding: 0%;
 }
@@ -11,6 +10,7 @@ body{
     height: 370px;
     background-color: #FBFCFC;
     border-radius: 25px;
+    margin-top: 10%;
     margin-left: auto;
     margin-right: auto;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -31,6 +31,7 @@ body{
     border: none;
     background-color: #FBFCFC;
     display: block;
+    border-bottom: solid 1px #D4D4D4;
 }
 .btn_rotat{
     width: 25px;
@@ -85,62 +86,99 @@ hr{
     text-align: center;
     padding-top: 8px;
 }
+
 .btn_comma{
-    display: flex;
-    width: 24%;
-    height: 33px;
-    margin-left: 18px;
-    margin-top: 1px;
-}
-.btn_comma_comma{
     width: 50%;
     text-align: center;
-    border-radius: 55% 0% 0% 55%;
     background-color: #F0F3F4;
-    padding: 3px;
-    
+    border-radius: 25px;
+
 }
 .btn_point{
     width: 50%;
     text-align: center;
-    border-radius: 0% 55% 55% 0%;
     background-color: #F0F3F4;
-    padding: 3px;
+    padding-top: 8px;
+    border-radius: 25px;
 }
 .div1{
     display: flex;
     margin-top: 10px;
 }
+
+.btn_C{
+    width: 50%;
+    text-align: center;
+    border-radius: 0% 55% 55% 0%;
+    background-color: #F0F3F4;
+    padding-top: 8px;
+}
+
+.btn_C:hover{
+    background-color: #c0c2c2;
+}
+
+.btn_switch{
+    width: 50%;
+    text-align: center;
+    border-radius: 55% 0% 0% 55%;
+    background-color: #F0F3F4;
+    padding-top: 8px;
+}
+
 .btn_switch img{
+    width: 15px;
     margin-top: 5px;
     display: block;
-    width: 25%;
     height: 10px;
     margin-left: auto;
     margin-right: auto;
 }
-.btn_square_root img{
-    width: 35%;
-    height: 20px;
-}
+
 .btn_exp_x img{
-    width: 40%;
-    height: 20px;
-}
-.btn_carre img{
-    width: 40%;
+    width: 30%;
     height: 20px;
 }
 .btn_power img{
-    width: 40%;
+    width: 30%;
     height: 20px;
 }
 .btn_sup_input_write{
     color: red;
+    display: inline-flex;
+    width: 22%;
+    margin-left: 18px;
 }
-.btn_parenthesis,.btn_percentage,.btn_division,.btn_multi,.btn_soustraction,.btn_addition{
+.btn_percentage,.btn_division,.btn_multi,.btn_soustraction,.btn_addition{
     color:#038D00;
 }
+
+.btn_parenthesis{
+    color:#038D00;
+    width: 50%;
+    text-align: center;
+    border-radius: 55% 0% 0% 55%;
+    background-color: #F0F3F4;
+    padding-top: 8px;
+}
+
+.btn_parenthesis:hover{
+    background-color: #c0c2c2;
+}
+
+.btn_parenthesis2{
+    color:#038D00;
+    width: 50%;
+    text-align: center;
+    border-radius: 0% 55% 55% 0%;
+    background-color: #F0F3F4;
+    padding-top: 8px;
+}
+
+.btn_parenthesis2:hover{
+    background-color: #c0c2c2;
+}
+
 .btn_equal{
     color: #ffffff;
     background-color: #038D00 !important;
@@ -154,12 +192,13 @@ hr{
 .btn_equal:hover {
     background-color: #015200 !important;
 }
+
+.btn_switch:hover{
+    background-color: #c0c2c2;
+}
 .Calculator_simple .btn_equal:hover{
     background-color: #c0c2c2;
     font-size: 0.9em;
 }
-<<<<<<< HEAD:computer.css
 
 }
-=======
->>>>>>> develope:style.css
