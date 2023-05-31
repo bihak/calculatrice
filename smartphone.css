@@ -2,14 +2,14 @@
 
     body{
         width: 100vw;
-        height: 100vh;
         margin: 0%;
         padding: 0%;
     }
     .container{
-        width: 55%;
+        width: 70%;
         background-color: #FBFCFC;
         border-radius: 25px;
+        margin-top: 10%;
         margin-left: auto;
         margin-right: auto;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -45,6 +45,10 @@
     .btn_rotat img{
         width: 100%;
         height: 100%;
+    }
+
+    .btn{
+        font-size: small;
     }
 
     hr{
@@ -90,24 +94,18 @@
     }
 
     .btn_comma{
-        display: flex;
-        width: 24%;
-        height: 33px;
-        margin-top: 1px;
-        padding: 3px;
-    }
-
-    .btn_comma_comma{
         width: 50%;
         text-align: center;
-        border-radius: 55% 0% 0% 55%;
         background-color: #F0F3F4;
+        border-radius: 25px;
+        padding-top: 8px;
     }
-    
     .btn_point{
+        width: 50%;
         text-align: center;
-        border-radius: 0% 55% 55% 0%;
         background-color: #F0F3F4;
+        padding-top: 8px;
+        border-radius: 25px;
     }
 
     .btn_C{
@@ -115,6 +113,7 @@
         text-align: center;
         border-radius: 0% 55% 55% 0%;
         background-color: #F0F3F4;
+        font-size: small;
     }
 
     .btn_switch{
@@ -133,20 +132,13 @@
         margin-left: auto;
         margin-right: auto;
     }
-    .btn_square_root img{
-        width: 90%;
-        height: 20px;
-    }
     .btn_exp_x img{
-        width: 90%;
+        width: 50%;
         height: 20px;
     }
-    .btn_carre img{
-        width: 90%;
-        height: 20px;
-    }
+
     .btn_power img{
-        width: 90%;
+        width: 50%;
         height: 20px;
     }
     .btn_sup_input_write{
@@ -154,9 +146,35 @@
         display: inline-flex;
         width: 22%;
     }
-    .btn_parenthesis,.btn_percentage,.btn_division,.btn_multi,.btn_soustraction,.btn_addition{
+    .btn_percentage,.btn_division,.btn_multi,.btn_soustraction,.btn_addition{
         color:#038D00;    
         padding-top: 8px;
+    }
+
+    .btn_parenthesis{
+        color:#038D00;
+        width: 50%;
+        text-align: center;
+        border-radius: 55% 0% 0% 55%;
+        background-color: #F0F3F4;
+        padding-top: 8px;
+    }
+    
+    .btn_parenthesis:hover{
+        background-color: #c0c2c2;
+    }
+    
+    .btn_parenthesis2{
+        color:#038D00;
+        width: 50%;
+        text-align: center;
+        border-radius: 0% 55% 55% 0%;
+        background-color: #F0F3F4;
+        padding-top: 8px;
+    }
+    
+    .btn_parenthesis2:hover{
+        background-color: #c0c2c2;
     }
 
     .btn_0, .btn_1, .btn_2, .btn_3, .btn_4, .btn_5, .btn_6, .btn_7, .btn_8, .btn_9, .btn_moreless{

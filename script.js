@@ -1,5 +1,3 @@
-
-
 // clic du bouton
 let rotat = document.getElementById("id_rotat")
 let scientific = document.getElementById("id_Calculator_Scientific")
@@ -55,6 +53,7 @@ function parenthesis(){
 
 function equal(chaine){
     let y = eval(chaine);
+    console.log(y)
     if (chaine.includes("/0")) {
 
         y = "Erreur : Division par zéro";
@@ -65,7 +64,18 @@ function equal(chaine){
 // POURCENTAGE
 function pourcentage(chiffre) {
     let y
-    y = chiffre / 100
+    if (chiffre[1]=='1') {
+        y = chiffre[0]+((chiffre[2]*chiffre[0])/100)
+    }
+    if (chiffre[1]=='2') {
+        y = chiffre[0]-((chiffre[2]*chiffre[0])/100)
+    }
+    if (chiffre[1]=='3') {
+        y = chiffre[0]*((chiffre[2]*chiffre[0])/100)
+    }
+    if (chiffre[1]=='4') {
+        y = chiffre[0]/((chiffre[2]*chiffre[0])/100)
+    }
     return y;
 }
 
@@ -90,12 +100,44 @@ function recup() {
     let input_write = document.getElementById('id_input_write');
     let resultat = input_write.value
     let chaine = resultat
-    const fonctions = ["sqrt", "sin","asin","acos","atan", "cos", "tan", "log", "exp", "cbrt", "pow", "abs"];
 
+    if (chaine.includes('%')==true) {
+    const regex = /(\d+\s*[-+*/]\s*\d+%)/g;
+    let tab = chaine.match(regex);
+    let ancientab = chaine.match(regex);
+    for (let i = 0; i < tab.length; i++) {
+        if (tab[i].includes('%')==true){
+            tab[i] = tab[i].replace('%','')
+        }
+    }
+    for (let i = 0; i < tab.length; i++) {
+        tab[i] = tab[i].match(/(\d+|\D)/g);
+        if (tab[i][1].includes('+')==true) {
+            tab[i][1]='1'
+    }
+        if (tab[i][1].includes('-')==true) {
+        tab[i][1]='2'
+    }
+        if (tab[i][1].includes('*')==true) {
+        tab[i][1]='3'
+    }
+        if (tab[i][1].includes('/')==true) {
+        tab[i][1]='4'
+    }
+    }
+    for (let i = 0; i < ancientab.length; i++) {
+        if (chaine.includes(ancientab[i])==true) {
+        chaine = chaine.replace(ancientab[i], 'pourcentage([('+tab[i][0]+'),('+tab[i][1]+'),('+tab[i][2]+')])')
+    }
+    }console.log(tab)
+    }
+    
+    const fonctions = ["sqrt", "sin","asin","acos","atan", "cos", "tan", "log", "exp", "cbrt", "pow", "abs"];
     fonctions.forEach(fonction => {
         const regex = new RegExp('\\b' + fonction + '\\b', 'g');
         chaine = chaine.replace(regex, 'Math.' + fonction);
     });
+    console.log(chaine)
     equal(chaine)
 }
     // OPERATOR + / -
@@ -105,3 +147,4 @@ function addOperator(){
     n = n * -1;
     a.value = n;
 };
+
